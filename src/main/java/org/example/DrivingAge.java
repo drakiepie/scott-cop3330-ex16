@@ -7,9 +7,16 @@ public class DrivingAge {
 
         System.out.print("What is your age? ");
         int ageInput = input.nextInt();
+
+        //while loop in case user enters an invalid age.
+        while(ageInput <= 0){
+            System.out.print("Invalid age entered, please try again: ");
+            ageInput = input.nextInt();
+        }
+
         int legalAge = 16;
 
-        String condition = (ageInput>legalAge)?"":"not ";
+        String condition = (ageInput >= legalAge)?"":"not ";
         System.out.println("You are " + condition + "old enough to legally drive");
 
 
