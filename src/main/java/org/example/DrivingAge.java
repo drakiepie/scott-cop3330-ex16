@@ -9,11 +9,10 @@ public class DrivingAge {
         int ageInput = input.nextInt();
         int legalAge = 16;
 
-        if(ageInput < legalAge){
-            System.out.println("You are not old enough to legally drive");
-        } else{
-            System.out.println("You are old enough to legally drive.");
-        }
+        String condition = (ageInput>legalAge)?"":"not ";
+        System.out.println("You are " + condition + "old enough to legally drive");
+
+
 
     }
 }
